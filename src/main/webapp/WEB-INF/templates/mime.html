@@ -1,0 +1,16 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4"> <!--声明Thymeleaf空间-->
+<head>
+    <title>Title</title>
+</head>
+<body>
+<div sec:authorize="isAuthenticated()">
+Hello <span sec:authentication="name" >someone</span>
+这里是你的页面，只有经过认证且有USER权限的才能进入。<br />
+</div>
+<form th:action="@{/logout}" method="POST">
+    <button type="submit" value="退出登录">退出登录</button>
+</form>
+</body>
+</html>

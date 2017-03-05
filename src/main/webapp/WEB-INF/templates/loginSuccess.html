@@ -1,0 +1,13 @@
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4"
+> <!--声明Thymeleaf空间-->
+<head>
+    <title>LoginSuccess</title>
+</head>
+<body>
+    恭喜你，<span sec:authentication="name">someone</span>，登录成功！<br/>
+    <a th:href="@{/mine}">前往个人主页</a>
+</body>
+</html>
